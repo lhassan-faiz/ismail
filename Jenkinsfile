@@ -1,5 +1,10 @@
 pipeline {
     agent any
+        environment {
+        // Define the path to Maven executable
+        MAVEN_HOME = "C:\Users\lhass\apache-maven-3.9.6-bin\apache-maven-3.9.6"
+        PATH = "$MAVEN_HOME\\bin;$PATH"
+    }
 
     stages {
         stage('Checkout') {
